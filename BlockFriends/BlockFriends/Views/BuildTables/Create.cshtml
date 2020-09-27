@@ -1,0 +1,79 @@
+﻿@model BlockFriends.Models.BuildTable
+@using Microsoft.AspNetCore.Identity;
+@inject UserManager<IdentityUser> userManager
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>New Build</h2>
+
+<h4></h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div>
+                <label for="Photo"></label>
+                <input id="FilePhoto" type="file" name="FilePhoto" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Buildname" class="control-label"></label>
+                <input asp-for="Buildname" class="form-control" />
+                <span asp-validation-for="Buildname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BuildContent" class="control-label"></label>
+                <input asp-for="BuildContent" class="form-control" />
+                <span asp-validation-for="BuildContent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaterialUsed" class="control-label"></label>
+                <input asp-for="MaterialUsed" class="form-control" />
+                <span asp-validation-for="MaterialUsed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BuildTime" class="control-label"></label>
+                <input asp-for="BuildTime" class="form-control" />
+                <span asp-validation-for="BuildTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BuildBiome" class="control-label"></label>
+                <input asp-for="BuildBiome" class="form-control" />
+                <span asp-validation-for="BuildBiome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProfileId" class="control-label"></label>
+                <select asp-for="ProfileId" class="form-control" value="@userManager.GetUserId(User)"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="BuilderNum" class="control-label"></label>
+                <input asp-for="BuilderNum" class="form-control" />
+                <span asp-validation-for="BuilderNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorldSeed" class="control-label"></label>
+                <input asp-for="WorldSeed" class="form-control" />
+                <span asp-validation-for="WorldSeed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BuildDate" class="control-label"></label>
+                <input asp-for="BuildDate" class="form-control" />
+                <span asp-validation-for="BuildDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

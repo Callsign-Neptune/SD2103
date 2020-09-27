@@ -1,0 +1,34 @@
+﻿@model BlockFriends.Models.BuildUser
+
+@{
+    ViewData["Title"] = "Show Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Showing Profile</h2>
+
+<div>
+    <h4>Builder</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Displayname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Displayname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bio)
+        </dd>
+        <dd>
+            <img src="\userPhotos\@Html.DisplayFor(model => model.PhotoPath)" width="200" height="200" />
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Browse">Go Back</a>
+</div>

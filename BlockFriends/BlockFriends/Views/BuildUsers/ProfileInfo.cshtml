@@ -1,0 +1,52 @@
+﻿@model BlockFriends.Models.BuildUser
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Build Profile</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Displayname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Displayname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Firstname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Firstname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Lastname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Lastname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Bio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Bio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.UserAccountId)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.UserAccountId)
+        </dd>
+        <dd>
+            <img src="\userPhotos\@Html.DisplayFor(model => model.PhotoPath)" width="200" height="200" />
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-controller="Home" asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,82 @@
+﻿@model BlockFriends.Models.BuildTable
+
+@{
+    ViewData["Title"] = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>BuildTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Buildname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Buildname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildContent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BuildContent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MaterialUsed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MaterialUsed)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BuildTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildBiome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BuildBiome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BuilderNum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BuilderNum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WorldSeed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WorldSeed)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildPhoto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BuildPhoto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BuildDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Profile.Bio)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

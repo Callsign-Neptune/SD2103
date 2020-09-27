@@ -1,0 +1,90 @@
+﻿@model IEnumerable<BlockFriends.Models.BuildTable>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Buildname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuildContent)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaterialUsed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuildTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuildBiome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuilderNum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.WorldSeed)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuildPhoto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BuildDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profile)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Buildname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuildContent)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MaterialUsed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuildTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuildBiome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuilderNum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.WorldSeed)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuildPhoto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BuildDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Profile.Bio)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

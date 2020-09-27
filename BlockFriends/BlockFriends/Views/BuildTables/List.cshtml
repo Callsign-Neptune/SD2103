@@ -1,0 +1,28 @@
+﻿@model IEnumerable<BlockFriends.Models.BuildTable>
+
+@{
+    ViewData["Title"] = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Posts</title>
+</head>
+<body>
+    <p>
+
+    </p>
+    @foreach (var item in Model)
+    {
+        <div>
+            @Html.DisplayFor(m => item.Buildname)
+            <p>@Html.DisplayFor(m => item.BuildPhoto)</p>
+            <p>@Html.DisplayFor(m => item.BuildContent)</p>
+        </div>
+    }
+</body>
+</html>
