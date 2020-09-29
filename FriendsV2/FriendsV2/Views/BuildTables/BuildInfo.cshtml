@@ -1,0 +1,47 @@
+﻿@model FriendsV2.Models.BuildTable
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+
+</div>
+<h2>Details</h2>
+
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">
+        @Html.DisplayFor(model => model.Buildname)
+        <small></small>
+    </h1>
+
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a asp-controller="Home" asp-action="Index">Home</a>
+        </li>
+        <li class="breadcrumb-item active">Post</li>
+    </ol>
+
+    <!-- Portfolio Item Row -->
+    <div class="row">
+
+        <div class="col-md-8">
+            <img class="img-fluid" src="~/buildPhotos/@Html.DisplayFor(model => model.BuildPhoto)" alt="">
+        </div>
+
+        <div class="col-md-4">
+            <h3 class="my-3">Build Description</h3>
+            <p>@Html.DisplayFor(model => model.BuildContent)</p>
+            <h3 class="my-3">Build Details</h3>
+            <ul>
+                <li>Time Spent Building: @Html.DisplayFor(model => model.BuildTime) hours</li>
+                <li>World Seed: @Html.DisplayFor(model => model.WorldSeed)</li>
+                <li># of Builders: @Html.DisplayFor(model => model.BuilderNum)</li>
+                <li>Date Posted: @Html.DisplayFor(model => model.BuildDate)</li>
+            </ul>
+        </div>
+        <div>
+            <a asp-action="List">Back to Posts</a>
+        </div>

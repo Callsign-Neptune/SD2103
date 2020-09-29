@@ -1,0 +1,61 @@
+﻿@model FriendsV2.Models.BuildTable
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BuildTable</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Buildname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Buildname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildContent)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BuildContent)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildTime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BuildTime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BuilderNum)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BuilderNum)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WorldSeed)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WorldSeed)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildPhoto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BuildPhoto)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BuildDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BuildDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="List">Back to Posts</a>
+</div>

@@ -1,0 +1,32 @@
+﻿@model FriendsV2.ViewModels.InboxViewModel
+@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Subject
+            </th>
+            <th>
+                From
+            </th>
+            <th>
+                Action
+            </th>
+        </tr>
+    </thead>
+
+    @foreach (var item in @Model.mailMessages)
+    {
+<tr>
+    <td>
+        @item.MessageTitle;
+    </td>
+    <td>
+        @Model.fromProfile.FirstOrDefault(id => id.Id == item.FromProfileId).Displayname
+    </td>
+    <td>
+        <a asp-action="Read" asp-route-id="@item.Id">Read</a>
+    </td>
+</tr>}
+</table>

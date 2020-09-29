@@ -1,0 +1,66 @@
+﻿@model FriendsV2.Models.BuildTable
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+<h4>BuildTable</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Buildname" class="control-label"></label>
+                <input asp-for="Buildname" class="form-control" />
+                <span asp-validation-for="Buildname" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BuildContent" class="control-label"></label>
+                <input asp-for="BuildContent" class="form-control" />
+                <span asp-validation-for="BuildContent" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BuildTime" class="control-label"></label>
+                <input asp-for="BuildTime" class="form-control" />
+                <span asp-validation-for="BuildTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BuilderNum" class="control-label"></label>
+                <input asp-for="BuilderNum" class="form-control" />
+                <span asp-validation-for="BuilderNum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorldSeed" class="control-label"></label>
+                <input asp-for="WorldSeed" class="form-control" />
+                <span asp-validation-for="WorldSeed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BuildPhoto" class="control-label"></label>
+                <input asp-for="BuildPhoto" class="form-control" />
+                <span asp-validation-for="BuildPhoto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BuildDate" class="control-label"></label>
+                <input asp-for="BuildDate" class="form-control" />
+                <span asp-validation-for="BuildDate" class="text-danger"></span>
+            </div>
+            @Html.HiddenFor(m => m.Id)
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="List">Back to Posts</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
