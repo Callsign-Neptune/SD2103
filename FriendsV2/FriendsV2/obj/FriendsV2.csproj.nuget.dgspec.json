@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ACT-Student\\Documents\\SD2103\\FriendsV2\\FriendsV2\\FriendsV2.csproj": {}
+    "C:\\Users\\ACT-Student\\Documents\\GitHub\\SD2103\\FriendsV2\\FriendsV2\\FriendsV2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ACT-Student\\Documents\\SD2103\\FriendsV2\\FriendsV2\\FriendsV2.csproj": {
+    "C:\\Users\\ACT-Student\\Documents\\GitHub\\SD2103\\FriendsV2\\FriendsV2\\FriendsV2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACT-Student\\Documents\\SD2103\\FriendsV2\\FriendsV2\\FriendsV2.csproj",
+        "projectUniqueName": "C:\\Users\\ACT-Student\\Documents\\GitHub\\SD2103\\FriendsV2\\FriendsV2\\FriendsV2.csproj",
         "projectName": "FriendsV2",
-        "projectPath": "C:\\Users\\ACT-Student\\Documents\\SD2103\\FriendsV2\\FriendsV2\\FriendsV2.csproj",
+        "projectPath": "C:\\Users\\ACT-Student\\Documents\\GitHub\\SD2103\\FriendsV2\\FriendsV2\\FriendsV2.csproj",
         "packagesPath": "C:\\Users\\ACT-Student\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACT-Student\\Documents\\SD2103\\FriendsV2\\FriendsV2\\obj\\",
+        "outputPath": "C:\\Users\\ACT-Student\\Documents\\GitHub\\SD2103\\FriendsV2\\FriendsV2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ACT-Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
